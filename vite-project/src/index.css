@@ -1,0 +1,175 @@
+@import "tailwindcss";
+@import "tailwindcss-animated";
+
+
+/* Remove as classes antigas que não serão mais usadas */
+
+/* Define a animação de fade-in e fade-out */
+@keyframes fade-out {
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-out {
+  animation: fade-out 1s ease-in-out forwards;
+}
+
+
+
+.animate-fade-in {
+  animation: fade-in 900ms ease-in-out both;
+  animation-delay: 3000ms;
+}
+
+/* Animação para mover as estrelas */
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-200vh); /* Mover o dobro da altura da tela */
+  }
+}
+
+/*
+  A técnica é criar um pseudo-elemento que cobre toda a tela e
+  espalhar as estrelas (pontos brancos) nele usando box-shadow.
+  Cada camada de estrela tem um tamanho e velocidade de animação diferente.
+*/
+.stars, .stars2, .stars3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Camada 1: Estrelas pequenas */
+.stars {
+  background: transparent;
+  /* Estrelas geradas com box-shadow. Formato: x y cor */
+  box-shadow: 
+    /* Você pode adicionar quantas estrelas quiser aqui! */
+    73vw 6vh #FFF, 9vw 11vh #FFF, 89vw 3vh #FFF, 53vw 12vh #FFF, 
+    3vw 13vh #FFF, 62vw 13vh #FFF, 6vw 23vh #FFF, 54vw 24vh #FFF, 
+    17vw 33vh #FFF, 69vw 34vh #FFF, 62vw 44vh #FFF, 4vw 55vh #FFF, 
+    8vw 63vh #FFF, 51vw 63vh #FFF, 4vw 74vh #FFF, 82vw 78vh #FFF, 
+    64vw 83vh #FFF, 8vw 94vh #FFF, 53vw 94vh #FFF;
+  width: 1px;
+  height: 1px;
+  animation: animStar 50s linear infinite;
+}
+
+/* Cria uma cópia idêntica das estrelas e a posiciona acima da original */
+.stars::after {
+  content: " ";
+  position: absolute;
+  top: 200vh; /* Posiciona a cópia acima */
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 
+    73vw 6vh #FFF, 9vw 11vh #FFF, 89vw 3vh #FFF, 53vw 12vh #FFF, 
+    3vw 13vh #FFF, 62vw 13vh #FFF, 6vw 23vh #FFF, 54vw 24vh #FFF, 
+    17vw 33vh #FFF, 69vw 34vh #FFF, 62vw 44vh #FFF, 4vw 55vh #FFF, 
+    8vw 63vh #FFF, 51vw 63vh #FFF, 4vw 74vh #FFF, 82vw 78vh #FFF, 
+    64vw 83vh #FFF, 8vw 94vh #FFF, 53vw 94vh #FFF;
+}
+
+/* Camada 2: Estrelas médias */
+.stars2 {
+  background: transparent;
+  box-shadow: 
+    8vw 1vh #FFF, 91vw 3vh #FFF, 43vw 10vh #FFF, 5vw 11vh #FFF, 
+    66vw 18vh #FFF, 96vw 29vh #FFF, 57vw 39vh #FFF, 1vw 44vh #FFF, 
+    82vw 54vh #FFF, 42vw 61vh #FFF, 35vw 73vh #FFF, 8vw 84vh #FFF, 
+    93vw 93vh #FFF, 59vw 98vh #FFF;
+  width: 2px;
+  height: 2px;
+  animation: animStar 80s linear infinite; /* Velocidade diferente para paralaxe */
+}
+
+.stars2::after {
+  content: " ";
+  position: absolute;
+  top: 200vh;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 
+    8vw 1vh #FFF, 91vw 3vh #FFF, 43vw 10vh #FFF, 5vw 11vh #FFF, 
+    66vw 18vh #FFF, 96vw 29vh #FFF, 57vw 39vh #FFF, 1vw 44vh #FFF, 
+    82vw 54vh #FFF, 42vw 61vh #FFF, 35vw 73vh #FFF, 8vw 84vh #FFF, 
+    93vw 93vh #FFF, 59vw 98vh #FFF;
+}
+
+/* Camada 3: Estrelas grandes */
+.stars3 {
+  background: transparent;
+  box-shadow: 4vw 8vh #FFF, 9vw 19vh #FFF, 49vw 23vh #FFF, 83vw 4vh #FFF, 3vw 83vh #FFF;
+  width: 3px;
+  height: 3px;
+  animation: animStar 120s linear infinite; /* Velocidade diferente para paralaxe */
+}
+
+.stars3::after {
+  content: " ";
+  position: absolute;
+  top: 200vh;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 
+    4vw 8vh #FFF, 9vw 19vh #FFF, 49vw 23vh #FFF, 83vw 4vh #FFF, 
+    3vw 83vh #FFF;
+}
+
+/* Animação para o gradiente roxo subir */
+@keyframes rise-gradient {
+  /* O 'from' não é mais necessário, pois o estado inicial já está no elemento */
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.body {
+  /* A classe .body agora serve como container para a animação do pseudo-elemento */
+  position: relative; /* Garante que o ::before fique contido aqui */
+}
+
+.body::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%); /* Garante que o estado inicial seja 'escondido' */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #1a0033 40%, transparent 70%);
+  /* 
+    Novo degradê:
+    - Começa com um roxo mais vibrante e com 70% de opacidade.
+    - Passa por um roxo mais escuro e com 90% de opacidade no meio.
+    - Termina em transparente, criando uma transição muito mais suave.
+  */
+  background: linear-gradient(to top, rgba(46, 25, 77, 0.7) 0%, rgba(26, 0, 51, 0.9) 50%, transparent 85%);
+  animation: rise-gradient 5s ease-in-out forwards;
+  animation-delay: 1s; /* Atraso para começar depois do fade-out do texto */
+}

@@ -1,0 +1,41 @@
+# Arquivos de dependências do Node.js
+# Geralmente, esta pasta contém muitos arquivos e pode ser facilmente recriada com 'npm install'.
+/node_modules
+
+# Arquivos de build do Vite
+# Pasta de saída padrão para os arquivos de produção.
+/dist
+/dist-ssr
+
+# Cache do Vite
+# Arquivos de cache para otimizar o desenvolvimento.
+.vite/
+
+# Arquivos de log
+# Arquivos de log gerados por npm, yarn, pnpm, etc.
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Arquivos de ambiente
+# Nunca adicione arquivos .env com informações sensíveis (chaves de API, senhas) ao Git.
+.env
+.env.local
+.env.*.local
+
+# Arquivos de IDEs e editores
+.vscode/
+.idea/
+*.suo
+*.sw?p
+
+# Arquivos gerados pelo sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de build do TypeScript
+*.tsbuildinfo
