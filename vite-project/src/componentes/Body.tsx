@@ -15,8 +15,6 @@ const tabs: Tab[] = [ // 2. Tipando o array como um array de 'Tab'
   { id: "inicio", label: "início", content: <InicioContent /> },
   { id: "trabalho", label: "trabalho", content: <TrabalhoContent /> },
   { id: "projetos", label: "projetos", content: <ProjetosContent /> },
-  { id: "blog", label: "blog", content: <BlogContent /> },
-  { id: "guestbook", label: "guestbook", content: <GuestbookContent /> },
 ];
 
 function Body() {
