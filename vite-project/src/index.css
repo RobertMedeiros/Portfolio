@@ -2,6 +2,14 @@
 @import "tailwindcss-animated";
 
 
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
 /* Remove as classes antigas que não serão mais usadas */
 
 /* Define a animação de fade-in e fade-out */
@@ -32,7 +40,7 @@
 
 .animate-fade-in {
   animation: fade-in 900ms ease-in-out both;
-  animation-delay: 3000ms;
+  animation-delay: 2000ms;
 }
 
 /* Animação para mover as estrelas */
@@ -170,6 +178,6 @@
     - Termina em transparente, criando uma transição muito mais suave.
   */
   background: linear-gradient(to top, rgba(46, 25, 77, 0.7) 0%, rgba(26, 0, 51, 0.9) 50%, transparent 85%);
-  animation: rise-gradient 5s ease-in-out forwards;
+  animation: rise-gradient 3s ease-in-out forwards;
   animation-delay: 1s; /* Atraso para começar depois do fade-out do texto */
 }
