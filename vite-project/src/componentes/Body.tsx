@@ -140,22 +140,4 @@ function ProjetosContent(): JSX.Element {
   );
 }
 
-function BlogContent(): JSX.Element {
-    return (
-      <div className="text-center p-10 bg-zinc-800/50 rounded-lg">
-        <h2 className="text-3xl font-bold text-white">Blog</h2>
-        <p className="text-gray-400 mt-2">Artigos e tutoriais sobre tecnologia.</p>
-      </div>
-    );
-}
-
-function GuestbookContent(): JSX.Element {
-    return (
-        <div className="text-center p-10 bg-zinc-800/50 rounded-lg">
-        <h2 className="text-3xl font-bold text-white">Guestbook</h2>
-        <p className="text-gray-400 mt-2">Deixe uma mensagem!</p>
-        </div>
-    );
-}
-
 export default Body;
