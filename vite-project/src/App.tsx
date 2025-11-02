@@ -1,5 +1,7 @@
 import './App.css'
-import Body from './componentes/Body'
+import Body from './componentes/Body.tsx'
+
+
 
 
 

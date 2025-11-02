@@ -40,7 +40,7 @@
 
 .animate-fade-in {
   animation: fade-in 900ms ease-in-out both;
-  animation-delay: 2000ms;
+  animation-delay: 1000ms;
 }
 
 /* Animação para mover as estrelas */
@@ -157,27 +157,6 @@
   }
 }
 
-.body {
-  /* A classe .body agora serve como container para a animação do pseudo-elemento */
-  position: relative; /* Garante que o ::before fique contido aqui */
-}
-
-.body::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: translateY(100%); /* Garante que o estado inicial seja 'escondido' */
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, #1a0033 40%, transparent 70%);
-  /* 
-    Novo degradê:
-    - Começa com um roxo mais vibrante e com 70% de opacidade.
-    - Passa por um roxo mais escuro e com 90% de opacidade no meio.
-    - Termina em transparente, criando uma transição muito mais suave.
-  */
-  background: linear-gradient(to top, rgba(46, 25, 77, 0.7) 0%, rgba(26, 0, 51, 0.9) 50%, transparent 85%);
-  animation: rise-gradient 3s ease-in-out forwards;
-  animation-delay: 1s; /* Atraso para começar depois do fade-out do texto */
+.devicon-typescript-plain {
+  font-size: 50px;
 }
