@@ -229,7 +229,7 @@ function InicioContent(): JSX.Element {
         <div className='md:col-span-3 md:col-start-2 md:col-end-5'>
           <div className='rounded-lg '>
             <h2 className='text-white text-xl roboto mt-3 text-center'>Este portfólio foi feito usando as tecnologias abaixo.</h2>
-            <div className='grid grid-cols-1 md:grid-cols-4'>
+            <div className='grid grid-cols-1 md:grid-cols-3'>
               <div className='flex flex-col items-center rounded-sm transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-zinc-700 mt-5 border-b border-white md:border-b-0'>
                 <a href="https://react.dev/" target='_blank' className='cursor-pointer p-2'>
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" className='h-15 w-15' />
@@ -238,11 +238,6 @@ function InicioContent(): JSX.Element {
               <div className='flex flex-col items-center rounded-sm transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-zinc-700 mt-5 border-b border-white md:border-b-0'>
                 <a href="https://tailwindcss.com/" target='_blank' className='cursor-pointer p-2'>
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="TailwindCSS" className='h-15 w-15' />
-                </a>
-              </div>
-              <div className='flex flex-col items-center rounded-sm transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-zinc-700 mt-5 border-b border-white md:border-b-0'>
-                <a href="https://motion.dev/" target='_blank' className='cursor-pointer p-2'>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg" alt="Framer Motion" className='h-15 w-15' />
                 </a>
               </div>
               <div className='flex flex-col items-center rounded-sm transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-zinc-700 mt-5 border-b border-white md:border-b-0'>
