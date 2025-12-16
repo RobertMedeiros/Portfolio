@@ -6,6 +6,8 @@ import { IoMdStar } from "react-icons/io";
 import flaskIcon from '../assets/flask-icon.png'
 import miumsPetshop from '../assets/Miums.jpeg'
 import pixelVerse from '../assets/PixelVerse.jpeg'
+import perfil from '../assets/perfil.jpeg';
+import perfil3 from '../assets/perfil3.jpeg';
 
 // 1. Definindo o tipo para cada item da navegação
 type Tab = {
@@ -124,6 +126,10 @@ function Body() {
 function InicioContent(): JSX.Element {
   return (
     <>
+      <div className=' justify-center flex mb-10 gap-5'>
+        <img src={perfil} alt="foto" className='rounded-full w-40 h-50'/>
+        <img src={perfil3} alt="foto" className='rounded-full w-40 h-50' />
+      </div>
       <div className="p-10 bg-zinc-800/50 rounded-lg">
         <h2 className="text-3xl font-bold text-white roboto">Olá! eu sou Robert 👋</h2>
         <p className="text-left text-gray-400 mt-2 roboto">Tenho 23 anos, sou graduando em Sistemas para Internet pelo IFRN, mais especificamente no 4° período. Sou desenvolvedor web, mais focado em frontend, mas sempre estou aberto para aprender novas áreas de desenvolvimento. Me apaixonei por programação em 2024 e desde então tem sido muito gratificante aprender mais e mais sobre. Inclusive, esse portfólio mesmo já é uma demonstração da minha criatividade e vontade de desenvolver experiências únicas para os usuários, não tenha medo de explorar!</p>
